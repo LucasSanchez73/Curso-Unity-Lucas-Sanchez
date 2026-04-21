@@ -30,6 +30,7 @@ public class JuanSalvo : MonoBehaviour
     {
         // Al iniciar, llamamos a la función que muestra los datos
         MostrarDatos();
+        
     }
 
     public void MostrarDatos()
@@ -59,17 +60,17 @@ public class JuanSalvo : MonoBehaviour
         //Ejemplo: si altura >= 2 -> "Fua estas para jugar en la NBA".
 
         // _finalMessage = ... (Escribe tu código aquí)
-         string messageFamily;
+         
         
-           if (hasFamily)
+           if (age >= 40)
         {
-            messageFamily = "Debo protegerlos"; 
+            _finalMessage = "Anda a salvar gente, ya viviste bastante"; 
         }
         else
         {
-            messageFamily = "Estoy perdido";
+            _finalMessage = "Todavia estas verde pichon, segui preparandote";
         }
-        _finalMessage = messageFamily;
+        
         Debug.Log(_finalMessage);
         // ---------------------------------------------------------
         // Actualizamos la UI visualmente no hace falta tocar esto
