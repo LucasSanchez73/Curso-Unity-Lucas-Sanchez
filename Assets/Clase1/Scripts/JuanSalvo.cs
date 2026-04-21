@@ -7,7 +7,7 @@ public class JuanSalvo : MonoBehaviour
 
     // Escribe tus variables aquí abajo: Recorda deben poder ser modificadas desde el inspector pero tambien ser privadas.
         [SerializeField]
-        private string name = "Juan Salvo";        
+        private string characterName = "Juan Salvo";        
         [SerializeField]
         private int age = 35;
         [SerializeField]
@@ -16,6 +16,7 @@ public class JuanSalvo : MonoBehaviour
         private bool hasFamily = true;
         [SerializeField]
         private string message = "Nadie se salva solo...";
+
     // ---------------------------------------------------------
     // (NO TOCAR)
     [Header("Referencias UI")]
@@ -37,10 +38,10 @@ public class JuanSalvo : MonoBehaviour
         // Asigna a la variable '_finalMessage' la concatenación de tus variables.
 
         // _finalMessage = ... (Escribe tu código aquí)
-            _finalMessage = "Nombre:"       + name     + "\n" +
-                            "Edad:"         + age      + "\n" +
-                            "Altura:"       + height   + "\n" +
-                            "tieneFamilia:" +hasFamily + "\n" +
+            _finalMessage = "Nombre:"        + characterName                                + "\n" +
+                            "Edad:"          + age                                          + "\n" +
+                            "Altura:"        + height                                       + "\n" +
+                            "Tiene Familia:" + (hasFamily ? "Si tiene" : "No tiene")        + "\n" +
                              message;
 
         // Mostrar en consola
@@ -58,7 +59,18 @@ public class JuanSalvo : MonoBehaviour
         //Ejemplo: si altura >= 2 -> "Fua estas para jugar en la NBA".
 
         // _finalMessage = ... (Escribe tu código aquí)
-
+         string messageFamily;
+        
+           if (hasFamily)
+        {
+            messageFamily = "Debo protegerlos"; 
+        }
+        else
+        {
+            messageFamily = "Estoy perdido";
+        }
+        _finalMessage = messageFamily;
+        Debug.Log(_finalMessage);
         // ---------------------------------------------------------
         // Actualizamos la UI visualmente no hace falta tocar esto
         ActualizarUI();
