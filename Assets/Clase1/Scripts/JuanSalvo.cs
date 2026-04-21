@@ -6,6 +6,17 @@ public class JuanSalvo : MonoBehaviour
     // 1. TAREA: Declarar variables para nombre, edad, altura (float) o lo que quieras.
 
     // Escribe tus variables aquí abajo: Recorda deben poder ser modificadas desde el inspector pero tambien ser privadas.
+        [SerializeField]
+        private string name = "Juan Salvo";
+        
+        [SerializeField]
+        private int age = 35;
+        
+        [SerializeField]
+        private float height = 1.69f;
+        
+        [SerializeField]
+        private bool hasFamily = true;
 
     // ---------------------------------------------------------
     // (NO TOCAR)
