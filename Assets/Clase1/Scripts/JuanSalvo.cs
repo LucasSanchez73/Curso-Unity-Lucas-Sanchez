@@ -7,17 +7,15 @@ public class JuanSalvo : MonoBehaviour
 
     // Escribe tus variables aquí abajo: Recorda deben poder ser modificadas desde el inspector pero tambien ser privadas.
         [SerializeField]
-        private string name = "Juan Salvo";
-        
+        private string name = "Juan Salvo";        
         [SerializeField]
         private int age = 35;
-        
         [SerializeField]
-        private float height = 1.69f;
-        
+        private float height = 1.69f;        
         [SerializeField]
         private bool hasFamily = true;
-
+        [SerializeField]
+        private string message = "Nadie se salva solo...";
     // ---------------------------------------------------------
     // (NO TOCAR)
     [Header("Referencias UI")]
@@ -39,6 +37,11 @@ public class JuanSalvo : MonoBehaviour
         // Asigna a la variable '_finalMessage' la concatenación de tus variables.
 
         // _finalMessage = ... (Escribe tu código aquí)
+            _finalMessage = "Nombre:"       + name     + "\n" +
+                            "Edad:"         + age      + "\n" +
+                            "Altura:"       + height   + "\n" +
+                            "tieneFamilia:" +hasFamily + "\n" +
+                             message;
 
         // Mostrar en consola
         Debug.Log(_finalMessage == null ? "¡Falta construir el mensaje!" : _finalMessage);
